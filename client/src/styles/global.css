@@ -568,13 +568,14 @@ textarea {
 
 .hero-visual {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-right: 18px; /* room for the offset accent block, so it never overflows */
 }
 
 .hero-photo {
   position: relative;
   width: 100%;
-  max-width: 420px;
+  max-width: 340px;
 }
 
 /* Solid accent block offset behind the photo: simple, bold, no glow. */
@@ -589,7 +590,7 @@ textarea {
 .hero-photo img {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1; /* compact, near-square frame; object-position keeps the head in view */
   object-fit: cover;
   object-position: center top;
   border-radius: var(--radius-lg);
@@ -613,13 +614,16 @@ textarea {
     justify-content: flex-start;
   }
   .hero-photo {
-    max-width: 300px;
+    max-width: 260px;
   }
 }
 
 @media (max-width: 480px) {
+  .hero-visual {
+    padding-right: 12px;
+  }
   .hero-photo {
-    max-width: min(240px, calc(100% - 18px));
+    max-width: min(210px, 100%);
   }
   .hero-photo::before {
     inset: 12px -12px -12px 12px;
