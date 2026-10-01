@@ -7,9 +7,9 @@
  *
  * Leave any link as null (or '') to hide it everywhere on the site.
  */
-// Portrait with a transparent background: the theme's accent colour fills in behind it.
-// To use a normal photo instead, import a .jpg/.webp and set profileImageCutout to false.
-import profileImage from '../assets/profile-cutout.webp'
+// Profile photo (square crop of the original portrait).
+// For a transparent-background cut-out instead, import that file and set profileImageCutout to true.
+import profileImage from '../assets/image.png'
 
 const portfolio = {
   name: 'Rasheed Ayomide',
@@ -21,7 +21,7 @@ const portfolio = {
     'I build modern web applications, APIs and digital solutions with React, Node.js, Express and MongoDB, with a focus on clean code, performance and real user impact.',
 
   profileImage,
-  profileImageCutout: true,
+  profileImageCutout: false,
   profileImageAlt: 'Portrait of Rasheed Ayomide in a dark suit',
 
   email: 'ayomiderasheed226@gmail.com',
